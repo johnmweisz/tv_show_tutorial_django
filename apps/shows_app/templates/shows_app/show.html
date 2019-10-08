@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>TV Shows</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'shows_app/style.css' %}">    
+</head>
+<body>
+    <h1>SHOW</h1>
+    <h2>Title: {{ title }}</h2>
+    <h4>Network: {{ network }}</h4>
+    <h4>Release: {{ release }}</h4>
+    <p>Description: {{ description }}</p>
+    <p>Updated_at: {{ updated_at }}</p>
+    <div>
+        <p>
+            <a href="/shows">MAIN</a> | <a href="/shows/{{id}}/edit">EDIT</a> | <a href="/shows/{{id}}/destroy">DELETE</a>
+        </p>   
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+</body>
+</html>
